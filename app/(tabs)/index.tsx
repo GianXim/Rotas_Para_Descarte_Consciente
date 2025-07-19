@@ -1,4 +1,5 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { LinearGradient } from 'expo-linear-gradient';
 import * as Location from 'expo-location';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -47,13 +48,11 @@ export default function App() {
             </View>
         );
     }
-    
+
     // O resto do seu código para os botões permanece o mesmo
 
-    const activeColor = '#7B2CBF';
+    const activeColor = 'gray';
     const inactiveColor = 'gray';
-    const activeColorback = '#21F102';
-    const inactiveColorback = 'transparent';
 
     return (
         <View style={styles.container}>
@@ -63,34 +62,68 @@ export default function App() {
                 initialRegion={{
                     latitude: location.coords.latitude,
                     longitude: location.coords.longitude,
-                    latitudeDelta: 0.005,
-                    longitudeDelta: 0.005,
+                    latitudeDelta: 0.002,
+                    longitudeDelta: 0.002,
                 }}
             />
+
             {/* O resto da sua UI (botões, etc.) */}
             <View style={styles.containerBotoes}>
                 <TouchableOpacity
-                    style={[styles.botaomapa, { backgroundColor: activeButton === 'map' ? activeColorback : inactiveColorback }]}
+                    style={[styles.botaomapa]}
                     onPress={() => setActiveButton('map')}
                 >
-                    <Ionicons
-                        name="map"
-                        size={24}
-                        color={activeButton === 'map' ? activeColor : inactiveColor}
-                    />
+                    {activeButton === 'map' ? (
+                        <LinearGradient
+                            colors={['#ffffff', '#c1f5f6']}
+                            locations={[0.5, 1]}
+                            style={{ width: '50%', height: '60%', borderRadius: 45, alignItems: 'center', justifyContent: 'center' }}
+                        >
+                            <Ionicons
+                                name="map"
+                                size={24}
+                                color={activeColor}
+                            />
+                        </LinearGradient>
+                    ) : (
+                        <Ionicons
+                            name="map-outline"
+                            size={24}
+                            color={inactiveColor}
+                        />
+                    )}
                 </TouchableOpacity>
                 <TouchableOpacity
-                    style={[styles.botaolista, { backgroundColor: activeButton === 'list' ? activeColorback : inactiveColorback }]}
+                    style={[styles.botaolista]}
                     onPress={() => setActiveButton('list')}
                 >
-                    <Ionicons
-                        name="list"
-                        size={24}
-                        color={activeButton === 'list' ? activeColor : inactiveColor}
-                    />
+                    {activeButton === 'list' ? (
+                        <LinearGradient
+                            colors={['#ffffff', '#c1f5f6']}
+                            locations={[0.5, 1]}
+                            style={{ width: '50%', height: '60%', borderRadius: 45, alignItems: 'center', justifyContent: 'center' }}
+                        >
+                            <Ionicons
+                                name="list"
+                                size={24}
+                                color={activeColor}
+                            />
+                        </LinearGradient>
+                    ) : (
+
+                        <Ionicons
+                            name="list-outline"
+                            size={24}
+                            color={inactiveColor}
+                        />
+                    )}
                 </TouchableOpacity>
             </View>
-            <View style={styles.pontomapa}></View>
+            <View style={styles.containerpontomapa}>
+                <TouchableOpacity>
+                    <Ionicons name="locate" size={24} color="black" />
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -119,6 +152,8 @@ const styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+
+
         borderRadius: 45,
     },
     botaolista: {
@@ -132,13 +167,15 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
-    pontomapa: {
-        bottom: '20%',
-        width: 40, // Definindo largura e altura iguais para um círculo
-        height: 40,
+    containerpontomapa: {
+        bottom: '15%',
+        width: '16%',
+        height: '8%',
         position: 'absolute',
         right: 40,
-        backgroundColor: 'blue',
-        borderRadius: 20, // Metade da largura/altura
+        backgroundColor: 'white',
+        borderRadius: 80, 
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });
