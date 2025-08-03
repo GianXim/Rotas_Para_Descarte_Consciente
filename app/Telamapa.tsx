@@ -167,7 +167,7 @@ export default function App(): React.JSX.Element {
 
     const origin = `${location.coords.latitude},${location.coords.longitude}`;
     const dest = `${destination.latitude},${destination.longitude}`;
-    const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=driving`;
+    const url = ``;
 
     Linking.openURL(url).catch(err => {
       console.error('Não foi possível abrir o mapa', err);
