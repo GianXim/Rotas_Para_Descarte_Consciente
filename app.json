@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Rotas_para_o_descarte_consciente",
+    "name": "Rotas para o descarte consciente",
     "slug": "Rotas_para_o_descarte_consciente",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -12,11 +12,18 @@
       "supportsTablet": true
     },
     "android": {
+      
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.seuusuario.meuappmapa",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDr2zjYi9Ml6auRsdflGzioBf5TV_iKpiY"
+        }
+      }
     },
     "web": {
       "bundler": "metro",
@@ -34,11 +41,15 @@
           "backgroundColor": "#ffffff"
         }
       ]
-
-
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "af8299f0-4cfe-47e4-bdb3-d72d3b3ce70a"
+      }
     }
   }
 }

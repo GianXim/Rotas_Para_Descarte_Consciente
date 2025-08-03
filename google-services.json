@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "673361340410",
+    "project_id": "ambiente-9af16",
+    "storage_bucket": "ambiente-9af16.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673361340410:android:bbc8a70054e79ee3932643",
+        "android_client_info": {
+          "package_name": "com.matoverde"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlmVmiypTpgnUT4xUO4POnWbNKRnN3_MM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673361340410:android:92d8dc94a8790b3a932643",
+        "android_client_info": {
+          "package_name": "com.seuusuario.meuappmapa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlmVmiypTpgnUT4xUO4POnWbNKRnN3_MM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
