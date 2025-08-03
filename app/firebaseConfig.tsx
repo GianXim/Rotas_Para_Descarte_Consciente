@@ -6,13 +6,13 @@ import { FirebaseOptions } from "firebase/app";
 // TODO: Adicione aqui a configuração do seu projeto Firebase
 // que você copiou do console.
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "AIzaSyBJD4AztNC7i3t3wwNAkwKq_fpMtrOQxwM",
-  authDomain: "ambiente-9af16.firebaseapp.com",
-  projectId: "ambiente-9af16",
-  storageBucket: "ambiente-9af16.appspot.com",
-  messagingSenderId: "673361340410",
-  appId: "1:673361340410:web:b063a780f2f495df932643",
-  measurementId: "G-CSRZRCE28B"
+  apiKey: "SUA CHAVE DE API",
+  authDomain: "SEU DOMÍNIO",
+  projectId: "SEU ID",
+  storageBucket: "SUAS CREDENCIAIS",
+  messagingSenderId: "SEU ID",
+  appId: "SEU APP ID",
+  measurementId: "SEU ID"
 };
 
 // Inicializa o Firebase e armazena a instância do app
