@@ -1,5 +1,14 @@
 # Rotas para o descarte consciente👋
 
+Autores:
+Bernardo Rainha;
+Gian Ximenes Verdan Pontes;
+Igor Crissaf;
+Pietra Nogueira Reis.
+
+### Descrição
+Este é um projeto desenvolvido durante o 3º período do curso de engenharia de computação para a disciplina 'ciências do ambiente', o projeto se baseia na ideia de um app para facilitar o descarte correto de resíduos tecnológicos. O aplicativo utiliza geolocalização para conectar cidadãos a pontos de coleta especializados, detalhando quais categorias de materiais (como baterias, monitores ou hardware) cada local está apto a receber, promovendo assim a economia circular e a preservação ambiental.
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
